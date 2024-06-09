@@ -10,7 +10,8 @@ This challenge showcases three distinct challenges, each highlighting the use of
 
 #Result of Interactive Photo Gallery Challenge
 <div>
-<img src="./Images/gallery01.png" width="230" height="200" border="10"></img>
+<a href=http://192.168.64.1:5555/Gallery/photo_gallery1.html>
+<img src="http://192.168.64.1:5555/Gallery/photo_gallery1.htmlhttp://192.168.64.1:5555/Gallery/photo_gallery1.html" width="230" height="200" border="10"></img></a>
 <img src="./Images/gallery02.png" width="230" height="200" border="10"></img>
 </div>
 
