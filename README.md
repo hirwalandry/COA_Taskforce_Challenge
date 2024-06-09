@@ -8,13 +8,6 @@ This challenge showcases three distinct challenges, each highlighting the use of
 - String Transformation Challenge: A JavaScript-based solution to verify if the length of a reversed string is divisible by a specified number and perform various operations accordingly.
 - Interactive Photo Gallery Challenge: A CSS-driven task to create a responsive and visually appealing image gallery that adheres to a given Figma design.
 
-#Result of Interactive Photo Gallery Challenge
-<div>
-<a href=http://192.168.64.1:5555/Gallery/photo_gallery1.html>
-<img src="http://192.168.64.1:5555/Gallery/photo_gallery1.htmlhttp://192.168.64.1:5555/Gallery/photo_gallery1.html" width="230" height="200" border="10"></img></a>
-<img src="./Images/gallery02.png" width="230" height="200" border="10"></img>
-</div>
-
 #Instructions to set up the project on your local machine and run the challenges 
 
 #Prerequisites
