@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Global styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Gallery container */
+      .gallery-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 40px 0 0;
+        overflow-x: auto; /* Allow horizontal scroll */
+      }
+
+      /* Individual gallery items */
+      .gallery {
+        position: relative;
+        border: 1px solid #ccc;
+        width: 103px;
+        height: 588px;
+        overflow: hidden;
+      }
+      .gallery:last-child {
+        margin-right: 0; /* Remove margin for the last image */
+      }
+      .gallery:hover {
+        border: 1px solid #777;
+        opacity: 1;
+      }
+      .gallery img {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        object-fit: cover;
+      }
+
+      /* Overlay on the images */
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.7) 100%
+        );
+        opacity: 1; /* Initially transparent */
+        transition: opacity 0.3s;
+      }
+
+      /* Media queries for responsive design */
+      @media only screen and (max-width: 1200px) {
+        .gallery {
+          width: 93px;
+          height: 480px;
+        }
+      }
+      @media only screen and (max-width: 900px) {
+        .gallery {
+          width: 73px;
+          height: 400px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .gallery {
+          width: 40px;
+          height: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery-container">
+      <div class="gallery">
+        <img
+          src="../Images/777826560132d8b8c2d5a6ac6af81c16.jpg"
+          alt="Cinque Terre"
+        />
+        <div class="gallery-overlay"></div>
+      </div>
+
+      <div class="gallery">
+        <img
+          src="../Images/6c4c12d75019b9c8baf6bbc0fea55a69.jpg"
+          alt="Forest"
+        />
+        <div class="gallery-overlay"></div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_lights.jpg">
+          <img
+            src="../Images/92f631646ee06cbebaa26340941835be.jpg"
+            alt="Northern Lights"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="gallery-overlay"></div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+          <img
+            src="../Images/9f841415410b11ef7b96c99921d0d17f.jpg"
+            alt="Mountains"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="gallery-overlay"></div>
+      </div>
+    </div>
+  </body>
+</html>

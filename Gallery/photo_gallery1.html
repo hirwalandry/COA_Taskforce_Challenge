@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Photo Gallery</title>
+    <style>
+      /* Global styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Gallery container */
+      .gallery-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 40px 0 0;
+        overflow-x: auto; /* Allow horizontal scroll */
+      }
+
+      /* Individual gallery items */
+      .gallery {
+        border: 1px solid #ccc;
+        width: 293px;
+        height: 588px;
+        position: relative;
+        overflow: hidden;
+        transition: opacity 0.3s;
+        
+      }
+      .gallery:last-child {
+        margin-right: 0; /* Remove margin for the last image */
+      }
+      .gallery:hover {
+        border: 1px solid #777;
+        opacity: 1;
+      }
+      .gallery img {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        object-fit: cover;
+      }
+
+      /* Overlay on the images */
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+        opacity: 1; /* Initially transparent */
+        transition: opacity 0.3s;
+      }
+
+      /* Information overlay */
+      .info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+        padding: 40px;
+        color: #fff;
+        z-index: 1; /* Ensure it appears on top of other content */
+        gap: 8px;
+      }
+      .info .heading {
+        font-family: "DIN Condensed", sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 38px;
+      }
+      .info .desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16.02px;
+        opacity: 70%;
+      }
+
+      /* Media queries for responsive design */
+      @media only screen and (max-width: 1200px) {
+        .gallery {
+          width: 240px;
+          height: 480px;
+        }
+        .info .heading {
+          font-size: 32px; /* Adjust heading size for smaller screens */
+        }
+        .info .desc {
+          font-size: 10px; /* Adjust description size for smaller screens */
+        }
+      }
+      @media only screen and (max-width: 900px) {
+        .gallery {
+          width: 200px;
+          height: 400px;
+        }
+        .info .heading {
+          font-size: 28px; /* Adjust heading size for smaller screens */
+        }
+        .info .desc {
+          font-size: 9px; /* Adjust description size for smaller screens */
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .gallery {
+          width: 160px;
+          height: 320px;
+        }
+        .info {
+          bottom: 0; /* Ensure info appears at the bottom */
+          width: 100%; /* Fill the width */
+          height: auto; /* Adjust height automatically */
+          padding: 10px; /* Adjust padding */
+        }
+        .info .heading {
+          font-size: 24px; /* Adjust heading size for smaller screens */
+          font-weight: 500;
+          line-height: 20px;
+        }
+        .info .desc {
+          font-size: 8px; /* Adjust description size for smaller screens */
+          font-weight: 300;
+          line-height: 12px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+      <div class="gallery">
+        <img
+          src="../Images/777826560132d8b8c2d5a6ac6af81c16.jpg"
+          alt="Cinque Terre"
+        />
+        <div class="gallery-overlay"></div>
+        <div class="info">
+          <div class="heading">fennec fox</div>
+          <div class="desc">India</div>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <img
+          src="../Images/6c4c12d75019b9c8baf6bbc0fea55a69.jpg"
+          alt="Forest"
+        />
+        <div class="gallery-overlay"></div>
+        <div class="info">
+          <div class="heading">humpback whale</div>
+          <div class="desc">South Africa</div>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_lights.jpg">
+          <img
+            src="../Images/92f631646ee06cbebaa26340941835be.jpg"
+            alt="Northern Lights"
+            width="600"
+            height="400"
+          />
+          <div class="gallery-overlay"></div>
+        </a>
+        <div class="info">
+          <div class="heading">common brown baboon</div>
+          <div class="desc">South Africa</div>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+          <img
+            src="../Images/9f841415410b11ef7b96c99921d0d17f.jpg"
+            alt="Mountains"
+            width="600"
+            height="400"
+          />
+          <div class="gallery-overlay"></div>
+        </a>
+        <div class="info">
+          <div class="heading">spotted deer</div>
+          <div class="desc">Amazon</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
