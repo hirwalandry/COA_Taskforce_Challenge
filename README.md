@@ -10,8 +10,8 @@ This challenge showcases three distinct challenges, each highlighting the use of
 
 #Result of Interactive Photo Gallery Challenge
 <div>
-<img src="images/gallery01.png" width="230" height="200" border="10"></img>
-<img src="images/gallery02.png" width="230" height="200" border="10"></img>
+<img src="./images/gallery01.png" width="230" height="200" border="10"></img>
+<img src="./images/gallery02.png" width="230" height="200" border="10"></img>
 </div>
 
 #Instructions to set up the project on your local machine and run the challenges 
